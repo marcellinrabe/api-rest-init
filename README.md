@@ -1,0 +1,1 @@
+- Utiliser postman(de préference), c'est ce que j'utilise.
