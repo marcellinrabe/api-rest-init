@@ -28,7 +28,7 @@ class Product{
      * 
      */
     public function lire(){
-        $request= "SELECT as c.nom, p.id, p.nom, p.description,
+        $request= "SELECT as c.nom as categories_nom, p.id, p.nom, p.description,
         p.prix, p.categories_id, p.created_at FROM ".$this->table." p LEFT JOIN
         categories c ON p.categories_id= c.id ORDER_BY p.created_at DESC";
 
