@@ -37,5 +37,23 @@ class Product{
         return $query;
     }
 
+    public function creer(array $produit){
+        $request= "INSERT INTO ".$this->table. "SET nom=nom, description=:description,
+        prix=:prix, categories_id=:categories_id";
 
+        $query= $this->orm->prepare($sql);
+
+        /* par strip_tags on supprime les balides html et php dans une chaine et puis 
+        htmlspecialchars renforce par la serialisation des balises restes non supprimés en texte brute */
+        $this->nom= htmlspecialchars(strip_tags($this->nom));
+        $this->description= htmlspecialchars(strip_tags($this->description));
+        $this->prix= htmlspecialchars(strip_tags($this->prix));
+        $this->categories_id= htmlspecialchars(strip_tags($this->categories_id));
+
+        if($query->execute()){
+            return TRUE;
+        }else{
+            return FALSE;
+        }
+    } 
 }

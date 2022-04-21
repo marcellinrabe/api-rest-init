@@ -17,7 +17,7 @@ header("Access-Control-Max-Age: 3600"); /* definie la durée de vie d'une requet
 rappeler qu'une API REST ne conserve pas de trace des ses transactions intérieurs. C'est peut-être à
 propos de cela que l'on a définie ceci */
 
-header("Acces-Control-Allow-Headers: content-type, Acces-Control-Allow-Headers,
+header("Acces-Control-Allow-Headers: Content-Type, Acces-Control-Allow-Headers,
 Authorization, X-Requested-With"); /* accepter les headers du clients, les headers spécifiés comme valeurs
 bien sûr */ 
 
